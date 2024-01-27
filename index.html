@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frostbite - Official Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap">
+    <style>
+        body {
+            font-family: 'Russo One', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('pattern.png');
+            background-size: 200px 200px;
+            color: #fff;
+            animation: backgroundAnimation 10s linear infinite;
+        }
+
+        @keyframes backgroundAnimation {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 200px 200px;
+            }
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        header {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('image1.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-family: 'Russo One', sans-serif;
+            color: #00ced1;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .social-links {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            margin-top: 0; /* No gap */
+        }
+
+        nav a {
+            color: #00ced1;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #212121;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .youtube-video {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .youtube-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .animated-text {
+            display: inline-block;
+            animation: textAnimation 2s ease-in-out infinite;
+        }
+
+        @keyframes textAnimation {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label,
+        form input,
+        form textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+        }
+
+        form button {
+            background-color: #00ced1;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Frostbite - Official Website</h1>
+        <div class="social-links">
+            <a href="https://www.youtube.com/R3dly" target="_blank">YouTube</a>
+            <a href="https://www.roblox.com/users/3518930376" target="_blank">Roblox</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#youtube-video">Game Trailer</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Frostbite</h2>
+        <p>This is the official website for the Roblox game Frostbite. Explore the sections below to learn more.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Frostbite</h2>
+        <p>Frostbite is an immersive Roblox game that takes you on an exciting adventure. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <section id="youtube-video">
+        <h2>Game Trailer</h2>
+        <div class="youtube-video">
+            <!-- Replace the src attribute with your actual YouTube video URL when the trailer is ready -->
+            <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>In-Game Gallery</h2>
+        <div class="gallery">
+            <img src="image1.png" alt="Image 1">
+            <img src="image2.png" alt="Image 2">
+            <img src="image3.png" alt="Image 3">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2024 Frostbite. All rights reserved.
+    </footer>
+
+    <script>
+        function submitForm() {
+            // You can add logic here to handle the form submission, for now, let's just log the data
+            var formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+            console.log(formData);
+        }
+    </script>
+
+</body>
+</html>
